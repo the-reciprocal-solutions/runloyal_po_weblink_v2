@@ -13,7 +13,7 @@ void main() {
 
   runApp(
     GetMaterialApp(
-      title: "Application",
+      title: "Runloyal PO",
       debugShowCheckedModeBanner: false,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
