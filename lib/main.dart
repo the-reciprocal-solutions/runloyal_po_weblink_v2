@@ -38,6 +38,9 @@ void main() {
           ),
         ),
       ),
+      // Add these configurations for hash-based routing
+      defaultGlobalState: true,
+      transitionDuration: const Duration(milliseconds: 300),
     ),
   );
 }
