@@ -18,12 +18,22 @@ flutter build web --base-href $BASE_HREF --release --web-renderer canvaskit --da
 
 Write-Host "Deploying to git repository"
 Set-Location build/web
+
+# Remove any existing git repository
+if (Test-Path ".git") {
+    Remove-Item -Recurse -Force .git
+}
+
+# Initialize new repository
 git init
 git add .
 git commit -m "Initial deployment with performance optimizations"
 git branch -M main
+
+# Force push to GitHub Pages branch
 git remote add origin $GITHUB_REPO
-git push -u -f origin main
+git push -f origin main:gh-pages
+
 Set-Location ../..
 
 Write-Host "✅ Finished deploy: $GITHUB_REPO"

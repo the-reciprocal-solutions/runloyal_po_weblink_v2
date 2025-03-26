@@ -111,7 +111,13 @@ class LoginView extends GetView<LoginController> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                         ),
-                        child: Text('Login'),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                       SizedBox(height: 20),
                       TextButton(
