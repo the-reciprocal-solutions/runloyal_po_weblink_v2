@@ -139,9 +139,9 @@ class LoginView extends GetView<LoginController> {
                       SizedBox(height: 32),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                                    children: [
                           Expanded(child: Divider()),
-                          Padding(
+                                      Padding(
                             padding: EdgeInsets.symmetric(horizontal: 16),
                             child: Text('OR'),
                           ),
