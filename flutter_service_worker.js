@@ -3,43 +3,45 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "693635b5258fe5f1cda720cf224f158c",
-"assets/AssetManifest.bin.json": "69a99f98c8b1fb8111c5fb961769fcd8",
-"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "7f44bfd182266271bed495b936c9b086",
-"assets/NOTICES": "6254b5ec6df9806998d2411fc369e045",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
-"assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
-"canvaskit/canvaskit.js": "738255d00768497e86aa4ca510cce1e1",
-"canvaskit/canvaskit.js.symbols": "74a84c23f5ada42fe063514c587968c6",
-"canvaskit/canvaskit.wasm": "9251bb81ae8464c4df3b072f84aa969b",
-"canvaskit/chromium/canvaskit.js": "901bb9e28fac643b7da75ecfd3339f3f",
-"canvaskit/chromium/canvaskit.js.symbols": "ee7e331f7f5bbf5ec937737542112372",
-"canvaskit/chromium/canvaskit.wasm": "399e2344480862e2dfa26f12fa5891d7",
-"canvaskit/skwasm.js": "5d4f9263ec93efeb022bb14a3881d240",
-"canvaskit/skwasm.js.symbols": "c3c05bd50bdf59da8626bbe446ce65a3",
-"canvaskit/skwasm.wasm": "4051bfc27ba29bf420d17aa0c3a98bce",
-"canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"flutter.js": "383e55f7f3cce5be08fcf1f3881f585c",
-"flutter_bootstrap.js": "5cc49825cf69568261d9c03de719ac0c",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
-"icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "e18c48a142b9aaf9feab654702b21352",
-"/": "e18c48a142b9aaf9feab654702b21352",
-"main.dart.js": "1376c43a30e96f5c9df492069ad71892",
-"manifest.json": "f222b05496797ad6aef93a1b59a3f598",
-"version.json": "845c295a43821de52a9c1644ea7ac3aa"};
+const RESOURCES = {
+  "assets/AssetManifest.bin": "693635b5258fe5f1cda720cf224f158c",
+  "assets/AssetManifest.bin.json": "69a99f98c8b1fb8111c5fb961769fcd8",
+  "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
+  "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+  "assets/fonts/MaterialIcons-Regular.otf": "7f44bfd182266271bed495b936c9b086",
+  "assets/NOTICES": "6254b5ec6df9806998d2411fc369e045",
+  "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
+  "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
+  "canvaskit/canvaskit.js": "738255d00768497e86aa4ca510cce1e1",
+  "canvaskit/canvaskit.js.symbols": "74a84c23f5ada42fe063514c587968c6",
+  "canvaskit/canvaskit.wasm": "9251bb81ae8464c4df3b072f84aa969b",
+  "canvaskit/chromium/canvaskit.js": "901bb9e28fac643b7da75ecfd3339f3f",
+  "canvaskit/chromium/canvaskit.js.symbols": "ee7e331f7f5bbf5ec937737542112372",
+  "canvaskit/chromium/canvaskit.wasm": "399e2344480862e2dfa26f12fa5891d7",
+  "canvaskit/skwasm.js": "5d4f9263ec93efeb022bb14a3881d240",
+  "canvaskit/skwasm.js.symbols": "c3c05bd50bdf59da8626bbe446ce65a3",
+  "canvaskit/skwasm.wasm": "4051bfc27ba29bf420d17aa0c3a98bce",
+  "canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03",
+  "favicon.png": "5dcef449791fa27946b3d35ad8803796",
+  "flutter.js": "383e55f7f3cce5be08fcf1f3881f585c",
+  "flutter_bootstrap.js": "1c01e062a35534d5fa943feb148d4d8f",
+  "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
+  "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
+  "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
+  "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
+  "index.html": "37240a28b2678f309d6fedbddf88f00e",
+  "/": "37240a28b2678f309d6fedbddf88f00e",
+  "main.dart.js": "09adf68f908470e26730e30faf490864",
+  "manifest.json": "f222b05496797ad6aef93a1b59a3f598",
+  "version.json": "845c295a43821de52a9c1644ea7ac3aa"
+};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
-"index.html",
-"flutter_bootstrap.js",
-"assets/AssetManifest.bin.json",
-"assets/FontManifest.json"];
+  "index.html",
+  "flutter_bootstrap.js",
+  "assets/AssetManifest.bin.json",
+  "assets/FontManifest.json"];
 
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
@@ -47,15 +49,15 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value, {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, { 'cache': 'reload' })));
     })
   );
 });
 // During activate, the cache is populated with the temp files downloaded in
 // install. If this service worker is upgrading from one with a saved
 // MANIFEST, then use this to retain unchanged resource files.
-self.addEventListener("activate", function(event) {
-  return event.waitUntil(async function() {
+self.addEventListener("activate", function (event) {
+  return event.waitUntil(async function () {
     try {
       var contentCache = await caches.open(CACHE_NAME);
       var tempCache = await caches.open(TEMP);
@@ -136,7 +138,7 @@ self.addEventListener("fetch", (event) => {
     return onlineFirst(event);
   }
   event.respondWith(caches.open(CACHE_NAME)
-    .then((cache) =>  {
+    .then((cache) => {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
         // lazily populate the cache only if the resource was successfully fetched.
