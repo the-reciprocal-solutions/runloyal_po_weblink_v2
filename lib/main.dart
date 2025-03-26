@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
-
+import 'package:url_strategy/url_strategy.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
-  // Use path URL strategy for web
-  setUrlStrategy(PathUrlStrategy());
-
-  // Enable skia shader warmup
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Use hash-based URLs for GitHub Pages compatibility
+  setHashUrlStrategy();
 
   runApp(
     GetMaterialApp(
@@ -23,6 +22,22 @@ void main() {
       defaultTransition: Transition.fadeIn,
       opaqueRoute: true,
       enableLog: false,
+      // Add routing configurations
+      routingCallback: (routing) {
+        if (routing?.current != null) {
+          print('Current Route: ${routing?.current}');
+        }
+      },
+      fallbackLocale: const Locale('en', 'US'),
+      // Handle unknown routes
+      unknownRoute: GetPage(
+        name: '/404',
+        page: () => const Scaffold(
+          body: Center(
+            child: Text('Page Not Found'),
+          ),
+        ),
+      ),
     ),
   );
 }
